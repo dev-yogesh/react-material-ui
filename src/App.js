@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { authRoutes, adminRoutes, userRoutes } from './routes';
+import { isLoggedIn, getRole } from './utilities/Auth';
+import NotFound from './utilities/pages/NotFound/NotFound';
+import AdminLayout from './utilities/layouts/AdminLayout/AdminLayout';
 import './App.css';
+import 'tippy.js/dist/tippy.css';
 
-function App() {
+const layoutRoutes = () => {
+  if (getRole() === 'admin') {
+    return adminRoutes;
+  } else {
+    return userRoutes;
+  }
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      {authRoutes.map((route, index) => (
+        <Route
+          key={index}
+          exact
+          path={route.path}
+          component={route.component}
+        />
+      ))}
+
+      {isLoggedIn() ? (
+        layoutRoutes().map((route, index) => (
+          <Route
+            key={index}
+            exact
+            path={route.path}
+            component={() => (
+              <AdminLayout>
+                <route.component />
+              </AdminLayout>
+            )}
+          />
+        ))
+      ) : (
+        <Redirect to='/signIn' />
+      )}
+
+      <Route component={NotFound} />
+    </Switch>
   );
-}
+};
 
 export default App;
