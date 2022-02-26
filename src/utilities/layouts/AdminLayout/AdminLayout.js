@@ -243,6 +243,28 @@ const AdminLayout = ({ children, openDrawer, toggleDrawer }) => {
                   classes={{ primary: classes.menuItemText }}
                 />
               </ListItem>
+
+              <ListItem
+                button
+                classes={{ root: classes.menuItemContainer }}
+                component={NavLink}
+                to='/contactUs'
+                activeClassName={classes.active}
+              >
+                <Tippy
+                  arrow
+                  placement='right'
+                  content='Contact Us'
+                >
+                  <ListItemIcon classes={{ root: classes.menuItemIcon }}>
+                    <Icon>local_hospital</Icon>
+                  </ListItemIcon>
+                </Tippy>
+                <ListItemText
+                  primary='Contact Us'
+                  classes={{ primary: classes.menuItemText }}
+                />
+              </ListItem>
             </List>
           </Box>
 

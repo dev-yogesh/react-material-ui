@@ -16,6 +16,8 @@ import NewUpdatesList from './modules/newUpdates/components/NewUpdatesList/NewUp
 import CasesList from './modules/cases/components/CasesList/CasesList';
 import PatientsList from './modules/patients/components/PatientsList/PatientsList';
 
+import ContactUs from './modules/contactUs/ContactUs';
+
 export const authRoutes = [
   {
     path: '/signIn',
@@ -51,6 +53,10 @@ export const adminRoutes = [
   {
     path: '/healthcareOrgs',
     component: HealthcareOrgsList,
+  },
+  {
+    path: '/contactUs',
+    component: ContactUs,
   },
 ];
 

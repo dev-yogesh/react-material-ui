@@ -1,0 +1,220 @@
+.contactus-container {
+  background-color: #096bd8;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contactus-inner-container {
+  width: 82%;
+  margin: auto;
+}
+
+.contactus-items-container {
+  display: flex;
+}
+
+.contactus-form-container {
+  flex: 60%;
+}
+
+.contactus-form-inner-container {
+  width: 95%;
+}
+
+.contactus-image-container {
+  flex: 50%;
+}
+
+.contactus-image {
+  width: 100%;
+  height: auto;
+  margin-left: 4rem;
+}
+
+.contactus-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.contactus-line {
+  height: 2.5px;
+  width: 50px;
+  display: inline-block;
+  background: white;
+}
+
+.contactus-text {
+  font-size: 0.8rem !important;
+  color: white !important;
+  margin-left: 1rem !important;
+  font-family: Montserrat !important;
+  font-weight: 900 !important;
+}
+
+.contactus-details-text {
+  font-size: 0.8rem !important;
+  color: white !important;
+  font-family: Montserrat !important;
+  font-weight: 900 !important;
+}
+
+.contactus-details-text-cname {
+  font-size: 1rem !important;
+  color: white !important;
+  margin-top: 12px !important;
+  font-family: Montserrat !important;
+  font-weight: 700 !important;
+}
+
+.contactus-details-text-office-address {
+  font-size: 1rem !important;
+  color: white !important;
+  margin-top: 12px !important;
+  font-family: Montserrat !important;
+  font-weight: 700 !important;
+}
+
+.contactus-large-text-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 85%;
+}
+
+.contactus-large-text {
+  font-size: 3rem !important;
+  line-height: 3.8rem !important;
+  color: white !important;
+  font-family: Montserrat !important;
+  font-weight: 600 !important;
+}
+
+.contactus-send-button {
+  padding: 1rem 2rem !important;
+  background-color: white !important;
+  font-family: Montserrat !important;
+  font-weight: 600 !important;
+}
+
+.contactus-button-icon {
+  margin-top: 0.1rem;
+  margin-left: 0.6rem;
+}
+
+.MuiInputLabel-root {
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.contactus-form-inner-container .MuiInputBase-input {
+  color: white !important;
+  font-family: Montserrat !important;
+}
+
+.contactus-form-inner-container .MuiInputLabel-outlined{
+  color: white !important;
+}
+
+.contactus-form-inner-container .MuiInputLabel-outlined.MuiInputLabel-shrink {
+  color: white !important;
+}
+
+@media only screen and (max-width: 1250px) {
+  .contactus-image {
+    width: 100%;
+    height: auto;
+    margin-left: 2rem;
+  }
+
+  /* .contactus-image-container {
+    flex: 50%;
+    margin-top: 4rem;
+  } */
+}
+
+@media only screen and (max-width: 1130px) {
+  .contactus-image {
+    width: 100%;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .contactus-large-text {
+    font-size: 2.5rem !important;
+    font-weight: 600 !important;
+    line-height: 3.8rem !important;
+    color: white !important;
+  }
+
+  /* .contactus-image-container {
+    flex: 50%;
+    margin-top: 4rem;
+  } */
+}
+
+@media only screen and (max-width: 991px) {
+  .contactus-large-text-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 60%;
+  }
+
+  .contactus-items-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactus-form-container {
+    flex: 100%;
+  }
+
+  .contactus-form-inner-container {
+    width: 100%;
+  }
+
+  .contactus-image-container {
+    flex: 100%;
+    margin-top: 2rem;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contactus-large-text-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .contactus-large-text {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    line-height: 2.8rem !important;
+    color: white !important;
+  }
+
+  .contactus-items-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactus-form-container {
+    flex: 100%;
+  }
+
+  .contactus-form-inner-container {
+    width: 100%;
+  }
+
+  /* .contactus-image-container {
+    flex: 100%;
+    margin-top: 2rem;
+    width: 100%;
+    height: 350px;
+  } */
+}
